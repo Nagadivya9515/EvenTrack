@@ -1,21 +1,20 @@
-import { Link } from 'react-router-dom'
-import { useAuth } from '../context/authContext'
-
-export default function Navbar() {
-  const { user, logout } = useAuth()
-
+ import React from "react";
+ const Navbar = () => {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/packages">Packages</Link>
+    <nav className="fixed top-0 left-0 w-full z-50 px-16 py-6 flex justify-between items-center bg-black/20 backdrop-blur-sm">
+      <h1 className="font-playfair text-white text-2xl font-bold tracking-widest">
+    
+      </h1>
 
-      {!user && <Link to="/login">Login</Link>}
-
-      {user?.role === 'admin' && (
-        <Link to="/admin">Admin</Link>
-      )}
-
-      {user && <button onClick={logout}>Logout</button>}
+      <ul className="flex gap-10 font-playfair text-white text-[16px]">
+        <li className="cursor-pointer hover:border-b">Home</li>
+        <li className="cursor-pointer hover:border-b">Packages</li>
+        <li className="cursor-pointer hover:border-b">Products & Gifts</li>
+        <li className="cursor-pointer hover:border-b">About</li>
+        <li className="cursor-pointer hover:border-b">Login</li>
+      </ul>
     </nav>
-  )
-}
+  );
+};
+
+export default Navbar;
