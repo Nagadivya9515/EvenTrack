@@ -10,9 +10,9 @@ import AdminAddPackage from './components/AdminAddPackage'
 import Packages from './pages/Packages'
 import Products from './pages/Products'
 import About from './pages/About'
-import Login from './pages/Login'
+import Login from './pages/login'
 import { Routes,Route } from 'react-router-dom'
-import AdminDashboard from './pages/AdminDashboard'
+// import AdminDashboard from './pages/AdminDashboard'
 import PackageDetails from './pages/packageDetails'
 
 function App() {
