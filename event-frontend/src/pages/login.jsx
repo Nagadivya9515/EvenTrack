@@ -1,6 +1,6 @@
 import { useAuth } from "../context/AuthContext";
 
-export function Login() {
+export default function Login() {
   const { login } = useAuth();
 
   const handleSubmit = async (e) => {

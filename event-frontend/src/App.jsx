@@ -29,8 +29,8 @@ function App() {
 < AdminAddPackage />
 </div> */}
 < Navbar />
-<PackageDetails />
-<AdminDashboard/>
+{/* <PackageDetails />
+<AdminDashboard/> */}
 <Routes>
   {/* <Route path ="/wedding" element ={<Wedding/>}/>
   <Route path ="/birthday" element ={<Birthday/>}/>
@@ -45,6 +45,7 @@ function App() {
   <Route path="/about" element={<About />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<RegistrationForm />} />
+  <Route path="/package/:wedding" element={<PackageDetails />} />
 
 </Routes>
 </>
