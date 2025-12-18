@@ -13,6 +13,7 @@ import About from './pages/About'
 import Login from './pages/Login'
 import { Routes,Route } from 'react-router-dom'
 import AdminDashboard from './pages/AdminDashboard'
+import PackageDetails from './pages/packageDetails'
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
 < AdminAddPackage />
 </div> */}
 < Navbar />
-<AdminDashboard/>
+{/* <PackageDetails />
+<AdminDashboard/> */}
 <Routes>
   {/* <Route path ="/wedding" element ={<Wedding/>}/>
   <Route path ="/birthday" element ={<Birthday/>}/>
@@ -44,7 +46,6 @@ function App() {
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<RegistrationForm />} />
   <Route path="/events/:eventType" element={<EventDetails />} />
-    
 </Routes>
 </>
   );

@@ -15,6 +15,9 @@ const events = [
 ];
 
 
+import PackageCard from "../components/PackageCard";
+import { Link } from "react-router-dom";
+
 export default function Packages() {
 
   const packages = [
@@ -102,33 +105,33 @@ export default function Packages() {
       </div>
 
       {/* 📦 EVENT CARDS */}
-       
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
-          {events.map((event) => (
-            <Link
-            key={event.path}
-            to={`/events/${event.path}`}
-            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
-          >
-        {filteredPackages.length > 0 ? (
-          filteredPackages.map(pkg => (
-            <PackageCard
-              key={pkg.id}
-              image={pkg.image}
-              category={pkg.category}
-              title={pkg.title}
-              content={pkg.content}
-            />
-          ))
-          
-        ) : (
-          <p className="col-span-full text-center text-gray-500">
-            No events found
-          </p>
-        )}
-        </Link>
-        ))} 
-    </div>
-        </div>
-  );
-}
+                  {events.map((event) => (
+                    <Link
+                    key={event.path}
+                    to={`/events/${event.path}`}
+                    className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                  >
+                {filteredPackages.length > 0 ? (
+                  filteredPackages.map(pkg => (
+                    <PackageCard
+                      key={pkg.id}
+                      image={pkg.image}
+                      category={pkg.category}
+                      title={pkg.title}
+                      content={pkg.content}
+                    />
+                  ))
+                  
+                ) : (
+                  <p className="col-span-full text-center text-gray-500">
+                    No events found
+                  </p>
+                )}
+                </Link>
+                ))} 
+            </div>
+                </div>
+          );
+        }
