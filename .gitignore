@@ -6,11 +6,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+event-frontend copy
+event backend copy
 node_modules
 dist
 dist-ssr
 *.local
+../event backend copy/
+../event-frontend copy/
+frontend/
+backend/.env
 
 # Editor directories and files
 .vscode/*
