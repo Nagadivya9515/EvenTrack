@@ -13,6 +13,7 @@ import About from './pages/About'
 import Login from './pages/Login'
 import { Routes,Route } from 'react-router-dom'
 import AdminDashboard from './pages/AdminDashboard'
+import PackageDetails from './pages/packageDetails'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 < AdminAddPackage />
 </div> */}
 < Navbar />
+<PackageDetails />
 <AdminDashboard/>
 <Routes>
   {/* <Route path ="/wedding" element ={<Wedding/>}/>
