@@ -6,13 +6,13 @@ import RegistrationForm from './pages/RegistrationForm'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import BookingForm from './components/BookingForm'
-import AdminAddPackage from './components/AdminAddPackage'
-import Packages from './pages/Packages'
+import AdminAddPackage from './pages/AdminAddPackage'
+import Packages from './pages/packages'
 import Products from './pages/Products'
 import About from './pages/About'
-import Login from './pages/Login'
+import Login from './pages/login'
 import { Routes,Route } from 'react-router-dom'
-import AdminDashboard from './pages/AdminDashboard'
+// import AdminDashboard from './pages/AdminDashboard'
 import PackageDetails from './pages/packageDetails'
 
 function App() {
@@ -45,8 +45,7 @@ function App() {
   <Route path="/about" element={<About />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<RegistrationForm />} />
-  <Route path="/package/:wedding" element={<PackageDetails />} />
-
+  <Route path="/events/:eventType" element={<EventDetails />} />
 </Routes>
 </>
   );

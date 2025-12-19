@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import EventScrollCard from '../components/Cards'
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 const CARD_WIDTH = 360;
 const GAP = 24;
 const Home = () => {
@@ -40,10 +41,11 @@ const scrollRef = useRef(null);
           Venora curates premium events with creativity, elegance, and
           unforgettable experiences.
         </p>
-
+      <Link to ="/packages">
         <button className="bg-white text-black px-8 py-3 rounded">
           Explore Packages
         </button>
+        </Link>
       </div>
     </div>  
   {/* EVENT SECTION */}
@@ -130,9 +132,11 @@ const scrollRef = useRef(null);
   </p>
 
   <div className="flex justify-center gap-4">
+    <Link to ="/packages">
     <button className="px-6 py-3 border rounded-md hover:bg-black hover:text-white transition">
       View All Packages
     </button>
+    </Link>
 
     <button className="px-6 py-3 border rounded-md hover:bg-black hover:text-white transition">
       Browse Products
