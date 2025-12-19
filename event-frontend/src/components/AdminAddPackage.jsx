@@ -1,6 +1,41 @@
 import React from "react";
 
 function AdminAddPackage() {
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!user || user.role !== "admin") {
+    alert("Access denied");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("title", form.title);
+  formData.append("category", form.category);
+  formData.append("description", form.description);
+  formData.append("price", form.price);
+  formData.append("image", image);
+
+  const res = await fetch("/api/v1/packages", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`
+    },
+    body: formData
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    alert(data.message);
+    return;
+  }
+
+  alert("Package added successfully!");
+};
+
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
       <div className="bg-white w-full max-w-xl rounded-xl shadow-lg p-6">
@@ -14,7 +49,7 @@ function AdminAddPackage() {
         </p>
 
         {/* Form */}
-        <form className="mt-6 space-y-5">
+        <form onSubmit={handleSubmit} className="mt-6 space-y-5">
 
           {/* Title */}
           <div>
