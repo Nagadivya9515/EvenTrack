@@ -25,8 +25,8 @@ const scrollRef = useRef(null);
   return (
     <div>
     <div
-      className="relative w-full h-screen bg-cover bg-center rounded-3xl overflow-hidden"
-      style={{ backgroundImage: "url('pic1.png')" }}
+      className="relative w-full h-screen bg-cover bg-center rounded-3xl overflow-hidden -mt-20"
+      style={{ backgroundImage: "url('https://github.com/Nagadivya9515/EvenTrack/blob/main/event-frontend/src/assets/pic1.png?raw=true')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-0"></div>

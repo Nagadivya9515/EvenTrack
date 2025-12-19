@@ -6,14 +6,14 @@ import RegistrationForm from './pages/RegistrationForm'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import BookingForm from './components/BookingForm'
-import AdminAddPackage from './pages/AdminAddPackage'
+import AdminAddPackage from './components/AdminAddPackage'
 import Packages from './pages/packages'
 import Products from './pages/Products'
 import About from './pages/About'
 import Login from './pages/login'
 import { Routes,Route } from 'react-router-dom'
 // import AdminDashboard from './pages/AdminDashboard'
-import PackageDetails from './pages/packageDetails'
+import EventDetails from './pages/EventDetails'
 
 function App() {
   return (
@@ -45,6 +45,7 @@ function App() {
   <Route path="/about" element={<About />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<RegistrationForm />} />
+  <Route path="/bookings" element={<BookingForm />} />
   <Route path="/events/:eventType" element={<EventDetails />} />
 </Routes>
 </>

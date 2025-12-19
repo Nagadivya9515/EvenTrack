@@ -1,17 +1,23 @@
 import React from "react";
-
+import Breadcrumb from "./Breadcrumb";
+import { Link } from "react-router-dom";
 export default function EventTemplate({ event }) {
   if (!event) {
     return <p className="text-center mt-10">Event not found</p>;
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="max-w-7xl mx-auto p-6">
+
+      <Breadcrumb />
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
       {/* LEFT SECTION */}
       <div className="lg:col-span-2 space-y-6">
 
         {/* About */}
+        
         <div className="bg-white rounded-xl p-6 shadow">
           <h2 className="text-xl font-semibold mb-2">
             About This Event
@@ -110,11 +116,11 @@ export default function EventTemplate({ event }) {
         <button className="w-full bg-purple-600 text-white py-3 rounded-lg mb-3 hover:bg-purple-700 transition">
           Add to Cart
         </button>
-
+        <Link to="/bookings">
         <button className="w-full border border-purple-600 text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition">
           Book Now
         </button>
-
+        </Link>
         <p className="text-center text-purple-600 mt-4 cursor-pointer">
           Call for Custom Quote
         </p>
@@ -124,6 +130,7 @@ export default function EventTemplate({ event }) {
         </div>
       </div>
 
+    </div>
     </div>
   );
 }

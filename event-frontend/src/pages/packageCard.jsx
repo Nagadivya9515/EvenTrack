@@ -1,3 +1,4 @@
+import Breadcrumb from "../components/Breadcrumb";
 export default function PackageCard({ image, title, category, content }) {
   return (
     <div className="rounded-xl overflow-hidden shadow bg-white">

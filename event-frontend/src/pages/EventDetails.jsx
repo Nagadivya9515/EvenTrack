@@ -10,10 +10,8 @@ export default function EventDetails() {
   const event = eventData[eventType];
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-    <Link to="/bookings">  
+    <div className="bg-gray-100 min-h-screen"> 
       <EventTemplate event={event} />
-    </Link>
     </div>
   );
 }

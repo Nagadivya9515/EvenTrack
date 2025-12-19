@@ -2,8 +2,8 @@ import React from "react";
 
 function BookingForm() {
   return (
-    <div className="bg-white w-full max-w-lg rounded-xl shadow-lg p-6">
-      
+    <div className="bg-white w-[95%] md:w-[85%] lg:w-[75%] rounded-xl shadow-lg p-20 mx-auto">
+ 
       {/* Header */}
       <h2 className="text-2xl font-semibold text-gray-800">
         Book Professionally On Venora
